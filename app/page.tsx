@@ -19,7 +19,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Genki Gonpei</h1>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">portfolio</h1>
         </motion.div>
 
         <motion.div
@@ -84,8 +84,8 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center text-lg leading-relaxed"
         >
-          <p>Hi, I'm Gonpei Genki. I'm majoring in cyber security.</p>
-          <p>I am a student at Niigata Computer College.</p>
+          <p>サイバーセキュリティを専攻しています</p>
+          <p>新潟コンピュータ専門学校の学生です</p>
         </motion.div>
       </section>
       <section className="max-w-4xl mx-auto">
