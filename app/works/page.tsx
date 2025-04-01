@@ -19,7 +19,7 @@ const works = [
   {
     id: 2,
     title: "新潟デジコングランプリ2024 一般 アプリの部 入選",
-    image: "/placeholder.svg?height=400&width=600", // 適切な画像パスに変更してください
+    image: "/RAivS.png", // 適切な画像パスに変更してください
     tags: ["チーム開発", "Webアプリケーション", "コンテスト"],
     githubUrl: "",
     liveUrl: "https://www.youtube.com/watch?v=Ujs7C0KRhaI&ab_channel=%E3%81%AB%E3%81%84%E3%81%8C%E3%81%9F%E3%83%87%E3%82%B8%E3%82%B3%E3%83%B3",
