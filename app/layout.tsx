@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "portfolio"
-  description: "portfolio site
+  description: "portfolio site"
     generator: 'v0.dev'
 }
 
