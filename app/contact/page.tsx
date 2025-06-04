@@ -25,7 +25,7 @@ export default function ContactPage() {
         <Card className="border border-white/10 bg-black/40 p-8">
           <div className="flex items-center justify-center gap-4 text-xl">
             <Mail className="h-6 w-6 text-white/80" />
-            <span>contact@example.com</span>
+            <span>coming soon</span>
           </div>
         </Card>
       </motion.div>
