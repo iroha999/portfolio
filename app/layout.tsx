@@ -9,8 +9,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ポートフォリオ",
-  description: "ポートフォリオサイト",
+  title: "portfolio"
+  description: "portfolio site
     generator: 'v0.dev'
 }
 
