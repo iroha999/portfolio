@@ -118,12 +118,14 @@ export default function Home() {
           </div>
           <h3 className="text-xl font-semibold">CSS</h3>
         </Card>
+        {/*
         <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
           <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
             <SiCsharp className="text-white/80 text-2xl" />
           </div>
           <h3 className="text-xl font-semibold">C#</h3>
         </Card>
+        */}
         <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
           <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
             <FaReact className="text-white/80 text-2xl" />
