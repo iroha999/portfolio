@@ -17,7 +17,7 @@ export default function Home() {
       <main className="flex-1 flex items-center px-8 md:px-16 lg:px-24 relative z-10">
         <div className="space-y-10">
           {/* Avatar */}
-          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden shadow-xl shadow-[#000080]/15 animate-fade-in-up">
+          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden shadow-xl shadow-[#000080]/15 animate-fade-in-up animate-float">
             <img
               src="/gonpei.png"
               alt="Genki Gonpei"
