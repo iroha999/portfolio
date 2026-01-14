@@ -1,17 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Header from "@/components/header"
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "portfolio",
-  description: "portfolio site",
-    generator: 'v0.dev'
+  title: "homepage",
+  description: "Genki Gonpei - Software Engineer",
 }
 
 export default function RootLayout({
@@ -20,19 +13,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <div className="min-h-screen bg-black flex flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-          </div>
-        </ThemeProvider>
+    <html lang="ja">
+      <body className="text-[#000080] font-mono">
+        {children}
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

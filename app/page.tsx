@@ -1,151 +1,81 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Briefcase, Github } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { FaHtml5, FaCss3Alt, FaReact, FaLinux } from "react-icons/fa";
-import { SiSharp as SiCsharp, SiTypescript } from "react-icons/si";
-
+import { Github, Briefcase, BookOpen, Mail, ArrowRight } from "lucide-react"
+import { LiquidGlass } from "@/components/LiquidGlass"
 
 export default function Home() {
   return (
-    <div className="container py-12 md:py-24 space-y-16">
-      <section className="space-y-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">portfolio</h1>
-        </motion.div>
+    <div className="min-h-screen flex flex-col relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/samuel-ferrara-1527pjeb6jg-unsplash.jpg')" }}
+      />
+      {/* Overlay for better text readability */}
+      <div className="fixed inset-0 bg-black/20" />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex justify-center"
-        >
-          <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/10">
+      <main className="flex-1 flex items-center px-8 md:px-16 lg:px-24 relative z-10">
+        <div className="space-y-10">
+          {/* Avatar */}
+          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden shadow-xl shadow-[#000080]/15 animate-fade-in-up">
             <img
               src="/gonpei.png"
               alt="Genki Gonpei"
-              className="object-cover w-full h-full"
+              className="w-full h-full object-cover"
             />
           </div>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <Button
-            asChild
-            variant="outline"
-            size="icon"
-            className="border-white/20 hover:bg-white/5 w-12 h-12 rounded-full"
-          >
-            <Link href="/works" aria-label="Works">
-              <Briefcase className="h-5 w-5" />
-            </Link>
-          </Button>
-          <Button
-            variant="outline"
-            asChild
-            size="icon"
-            className="border-white/20 hover:bg-white/5 w-12 h-12 rounded-full"
-          >
-            <a href="https://github.com/iroha999" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <Github className="h-5 w-5" />
-            </a>
-          </Button>
-        </motion.div>
-      </section>
+          {/* Name */}
+          <div className="space-y-3 animate-fade-in-up animate-delay-100">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-lg">
+              Genki Gonpei
+            </h1>
+            <p className="text-white/80 text-lg md:text-xl drop-shadow-md">
+              Junior Engineer
+            </p>
+          </div>
 
-      <section className="max-w-4xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold tracking-tight text-center mb-8"
-        >
-          About Me
-        </motion.h2>
+          {/* Links */}
+          <LiquidGlass intensity="medium" className="p-6 animate-fade-in-up animate-delay-200">
+            <nav className="flex flex-col gap-3">
+              <a
+                href="https://github.com/iroha999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 py-2 text-white/80 hover:text-white transition-all"
+              >
+                <Github className="h-5 w-5" />
+                <span className="text-lg">GitHub</span>
+                <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+              </a>
+              <div className="flex items-center gap-4 py-2 text-white/40">
+                <BookOpen className="h-5 w-5" />
+                <span className="text-lg">Zenn</span>
+                <span className="text-xs border border-white/30 rounded px-2 py-0.5">coming soon</span>
+              </div>
+              <a
+                href="https://www.wantedly.com/id/iroha999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 py-2 text-white/80 hover:text-white transition-all"
+              >
+                <Briefcase className="h-5 w-5" />
+                <span className="text-lg">Wantedly</span>
+                <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+              </a>
+              <div className="flex items-center gap-4 py-2 text-white/40">
+                <Mail className="h-5 w-5" />
+                <span className="text-lg">Contact</span>
+                <span className="text-xs border border-white/30 rounded px-2 py-0.5">coming soon</span>
+              </div>
+            </nav>
+          </LiquidGlass>
+        </div>
+      </main>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center text-lg leading-relaxed"
-        >
-          <p>サイバーセキュリティを専攻しています</p>
-          <p>新潟コンピュータ専門学校の学生です</p>
-        </motion.div>
-      </section>
-      <section className="max-w-4xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-3xl font-bold tracking-tight text-center mb-8"
-      >
-        Technical Skills
-      </motion.h2>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-      >
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <FaHtml5 className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">HTML</h3>
-        </Card>
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <FaCss3Alt className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">CSS</h3>
-        </Card>
-        {/*
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <SiCsharp className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">C#</h3>
-        </Card>
-        */}
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <FaReact className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">React</h3>
-        </Card>
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <SiTypescript className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">TypeScript</h3>
-        </Card>
-        <Card className="bg-black/40 border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-4">
-            <FaLinux className="text-white/80 text-2xl" />
-          </div>
-          <h3 className="text-xl font-semibold">Linux</h3>
-        </Card>
-      </motion.div>
-    </section>
+      <footer className="px-8 md:px-16 lg:px-24 py-6 text-white/60 text-sm animate-fade-in-up animate-delay-300 relative z-10">
+        © 2026 Genki Gonpei
+      </footer>
     </div>
   )
 }
