@@ -57,7 +57,7 @@ export const LiquidGlass: React.FC<LiquidGlassProps> = ({
         boxShadow: isHovered
           ? "0 12px 48px 0 rgba(0, 0, 0, 0.15)"
           : styles.shadow,
-        borderRadius: "20px",
+        borderRadius: "38px",
         transform: "translateZ(0)",
         transition: "all 0.3s ease-in-out",
       }}
