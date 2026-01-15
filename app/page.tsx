@@ -48,11 +48,6 @@ export default function Home() {
                 <span className="text-lg">GitHub</span>
                 <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
               </a>
-              <div className="flex items-center gap-4 py-2 text-white/40">
-                <BookOpen className="h-5 w-5" />
-                <span className="text-lg">Zenn</span>
-                <span className="text-xs border border-white/30 rounded px-2 py-0.5">coming soon</span>
-              </div>
               <a
                 href="https://www.wantedly.com/id/iroha999"
                 target="_blank"
