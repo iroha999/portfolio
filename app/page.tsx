@@ -1,11 +1,17 @@
 "use client"
 
+import { useState } from "react"
 import { Github, Briefcase, BookOpen, Mail, ArrowRight } from "lucide-react"
 import { LiquidGlass } from "@/components/LiquidGlass"
+import { LoadingScreen } from "@/components/LoadingScreen"
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
     <div className="min-h-screen flex flex-col relative">
+      {/* Loading Screen */}
+      <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
       {/* Background Image */}
       <div 
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
